@@ -1,0 +1,20 @@
+*{
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+h1{
+    font-size: 2rem;
+    padding:1rem 0;
+    font-weight:bolder;
+}
+h3{
+    font-size: 1rem;
+    padding-bottom: 0.5rem;
+    font-weight: normal;
+}
+.menu-box{
+    background-color:white;
+    text-align: center;
+    color:black;
+}

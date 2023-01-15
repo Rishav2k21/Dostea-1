@@ -17,7 +17,7 @@ const useStyles = makeStyles({
   },
 });
 function Icon(props) {
-  const { Heading, itemList } = props.item;
+  const { Heading} = props.item;
   const classes = useStyles();
   return (
     <>
@@ -27,8 +27,8 @@ function Icon(props) {
             <img className={classes.image}
               width={200}
               height={200}
-              src={`images/${_.lowerCase(Heading)}.jpg`}
-              alt={`images/${_.lowerCase(Heading)}.jg`}
+              src={`images/menu/${_.lowerCase(Heading)}.jpg`}
+              alt={`images/menu/${_.lowerCase(Heading)}.jg`}
             />
             <Link
               underline={"hover"}

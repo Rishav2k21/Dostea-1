@@ -1,8 +1,14 @@
 import Menu from "./Menu";
-
+import{BrowserRouter as Router, Routes,Route} from 'react-router-dom'
+import AboutUs from "./AboutUs";
 function App () {
     return ( <>
-    <Menu/>
+    <Router>
+        <Routes>
+            <Route exact path="/" element={<Menu/>}/>
+            <Route exact path="/about"element={<AboutUs/>}/>
+        </Routes>
+    </Router>
     </> );
 }
 

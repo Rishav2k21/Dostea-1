@@ -449,3 +449,60 @@ const menu=[
   {name:"Fried Papad",price:"36"},
   {name:"Masala Papad",price:"48"},
   {name:"Green Salad",price:"119"}]}]
+
+
+ const aboutData= [
+    {
+      title:"Yum Chocolate",
+      img:"images/about/0.jpg",
+      menu:true,
+      Description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
+                  harum omnis eum ipsam, enim obcaecati! Veritatis incidunt
+                  voluptas saepe accusantium quod ut architecto beatae at iure.
+                  Quibusdam amet optio autem, sint sit quisquam rerum vitae a,
+                  iusto, perspiciatis perferendis architecto!",
+    }
+    {
+      title:"Yum Chocolate",
+      img:"images/about/1.jpg",
+      menu:false,
+      Description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
+                  harum omnis eum ipsam, enim obcaecati! Veritatis incidunt
+                  voluptas saepe accusantium quod ut architecto beatae at iure.
+                  Quibusdam amet optio autem, sint sit quisquam rerum vitae a,
+                  iusto, perspiciatis perferendis architecto! ",
+    }
+    {
+      title:"Yum Chocolate",
+      img:"images/about/2.jpg",
+      menu:true,
+      Description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
+                  harum omnis eum ipsam, enim obcaecati! Veritatis incidunt
+                  voluptas saepe accusantium quod ut architecto beatae at iure.
+                  Quibusdam amet optio autem, sint sit quisquam rerum vitae a,
+                  iusto, perspiciatis perferendis architecto! ",
+    }
+    {
+      title:"Yum Chocolate",
+      img:"images/about/3.jpg",
+      menu:false,
+      Description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
+                  harum omnis eum ipsam, enim obcaecati! Veritatis incidunt
+                  voluptas saepe accusantium quod ut architecto beatae at iure.
+                  Quibusdam amet optio autem, sint sit quisquam rerum vitae a,
+                  iusto, perspiciatis perferendis architecto!",
+    }
+    {
+      title:"Yum Chocolate",
+      img:"images/about/4.jpg",
+      menu:true,
+      Description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
+                  harum omnis eum ipsam, enim obcaecati! Veritatis incidunt
+                  voluptas saepe accusantium quod ut architecto beatae at iure.
+                  Quibusdam amet optio autem, sint sit quisquam rerum vitae a,
+                  iusto, perspiciatis perferendis architecto!",
+    }
+
+
+
+  ]

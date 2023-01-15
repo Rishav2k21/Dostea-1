@@ -13,8 +13,21 @@ h3{
     padding-bottom: 0.5rem;
     font-weight: normal;
 }
-.menu-box{
-    background-color:white;
-    text-align: center;
-    color:black;
+.bgimage{
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
+.menu-box{
+    background-color:#694A34;
+    text-align: center;
+    color:white;
+    background-image: url('../images/about/background.jpg');
+}
+.crosel{
+    background-image: url('../images/about/carousel/crouselbg.jpg');
+    color: white;
+}
+

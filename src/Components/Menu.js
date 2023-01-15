@@ -11,11 +11,11 @@ import {
 import { useState } from "react";
 import { Card } from "react-bootstrap";
 import Icon from "./Icon";
-import menu from "./Items";
-import itemList from "./Items";
+import {menu} from "./Data";
 import CloseIcon from "@mui/icons-material/Close";
 import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
 import React from 'react'
+
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
@@ -30,7 +30,7 @@ function Menu() {
   const [show, setShow] = useState(false);
   function showMenu(id) {
     setDishes(
-      itemList.filter((item, index) => {
+      menu.filter((item, index) => {
         return index === id;
       })
     );
@@ -39,10 +39,10 @@ function Menu() {
   function handleClose() {
     setShow(false);
   }
-
+  
   return (
     <>
-      <section className="menu-box">
+      <section className="menu-box bgimage">
         <h1 className="heading">Dostea Menu</h1>
         <h3 className="subheading"> Special people need something Special </h3>
 
@@ -80,7 +80,7 @@ function Menu() {
                 <>
                   <Grid item key={index} lg={4} md={6} sm={6} xs={12} mx={1}>
                     <Card>
-                      <CardMedia component="img"  sx={{borderRadius:'100%',width:'50%'}} src="images/empty.png" alt="empty-plate" />
+                      <CardMedia component="img"  sx={{borderRadius:'100%',width:'50%'}} src="images/menu/empty.png" alt="empty-plate" />
                       <CardContent>
                         <Typography
                           variant="h5"

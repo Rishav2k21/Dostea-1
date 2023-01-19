@@ -13,7 +13,8 @@ const useStyles = makeStyles({
     },
   },
   image: {
-    borderRadius: "100%",
+    borderRadius: "5%",
+    opacity:'0.9',
   },
 });
 function Icon(props) {
@@ -23,8 +24,8 @@ function Icon(props) {
     <>
       <Grid item lg={2} md={3} sm={4} xs={6} mx={1}>
         <Box className={classes.box}>
-          <Paper minHeight={250} >
-            <img className={classes.image}
+          <Paper elevation={0} sx={{backgroundColor:'transparent'}} minHeight={250} >
+            <img style={{boxShadow: "0.625rem 0.625rem 0.625rem black,-0.625rem -0.625rem 0.625rem #7B3F00" }} className={classes.image}
               width={200}
               height={200}
               src={`images/menu/${_.lowerCase(Heading)}.jpg`}
@@ -32,13 +33,13 @@ function Icon(props) {
             />
             <Link
               underline={"hover"}
-              color="black"
+              color="white"
               className={classes.link}
               onClick={() => {
                 props.handleClick(props.id);
               }}
             >
-              <Typography variant="h1" fontSize={20}>
+              <Typography style={{fontFamily:"cursive"}} variant="h1" textAlign={'center'} fontSize={'2rem'}>
                 {Heading}
               </Typography>
             </Link>

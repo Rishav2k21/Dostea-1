@@ -6,6 +6,7 @@ import {
   ImageList,
   ImageListItem,
   Typography,
+  Card,
 } from "@mui/material";
 import CoffeeIcon from "@mui/icons-material/Coffee";
 import { Carousel } from "react-responsive-carousel";
@@ -16,12 +17,13 @@ function AboutUs() {
   return (
     <>
       <Grid className="about ">
-        <Grid container mt={10}>
+        <Grid container >
           <Grid item lg={12}>
             <CardMedia
               component={"img"}
-              src="images/about/0.jpg"
+              src="images/about/abc.jpg"
               alt="Dostea-img"
+              style={{width:"100%",height:"70%" }}
             />
           </Grid>
         </Grid>
@@ -38,7 +40,7 @@ function AboutUs() {
             <Typography variant="h1" className="heading">
               Our Story
             </Typography>
-            <Typography>
+            <Typography fontSize={'2rem'}>
               It is surat based startup started on 15 September 2020 by 3
               friends who are tea lover so they started there own cafe franchise
               of Gujarat first eatable biscuit cup cafe. In which u drink the
@@ -71,33 +73,30 @@ function AboutUs() {
           justifyContent="center"
           alignItems="center"
         >
-          <Typography variant="h4" gutterBottom mt={2} color={"#777"}>
+          <Typography variant="h3" gutterBottom mt={2} color={"#777"}>
             Why we Love Dostea ?
           </Typography>
           <Grid
               mx={"auto"}
+              pb={3}
               container
               direction="row"
               justifyContent="center"
               alignItems="center"
               lg={8}
             >
-          <Carousel infiniteLoop autoPlay showArrows={false} showThumbs={false}>
+          <Carousel  dynamicHeight infiniteLoop autoPlay showArrows={false} showThumbs={false}>
             {aboutData.map((item,index)=>{
               return <> 
               <Grid container>
-              <Grid item lg={6}  md={6} sm={12} xs={12}>
-                <img
-                  width={500}
-                  height={500}
-                  style={{ borderRadius: "100%" }}
-                  src={item.img}
-                  alt="hello"
-                />
+              <Grid item lg={6} pr={2}  md={6} sm={12} xs={12}>
+              <Card style={{backgroundColor:'transparent'}}>
+                <CardMedia  width={'100%'} height={'400rem'} component={'img'} src={item.img}/>
+            </Card>
               </Grid>
               <Grid item my={'auto'} lg={6} md={6} sm={12} xs={12}>
-                <h1>{item.title}</h1>
-                <p>{item.Description}</p>
+                <Typography variant="h2">{item.title}</Typography>
+                <Typography fontSize={'1.4rem'}>{item.Description}</Typography>
                 <Typography mt={2} fontWeight={"bold"}>{item.menu ?<Button variant="contained" color="error">Menu</Button>:<Button variant="contained" color="success">Visit</Button> }</Typography>
               </Grid>
               </Grid>

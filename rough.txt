@@ -506,3 +506,75 @@ const menu=[
 
 
   ]
+
+  <Grid container cl direction={"row"}>
+        <Carousel infiniteLoop display={"inline-grid"}>
+          <div className="swiper-slide slide">
+            {/* <li style={mystyle}> */}
+            <ul style={mystyle}>
+              <li>
+                <div className="content">
+                  <span style={{ color: "red" }}>our special dish</span>
+                  <h3 style={fonts}>Chille garlic fries</h3>
+                  <p style={font1}>
+                    {" "}
+                    Chilli Garlic fried rice is an absolute winner spicy and
+                    garlicky Fried Rice filled with fiery chili and garlic
+                    flavours that is simply delicious!{" "}
+                  </p>
+                  <a
+                    href="#"
+                    className="btn"
+                    style={{ color: "red", padding: "10px" }}
+                  >
+                    view menu{" "}
+                  </a>
+                </div>
+              </li>
+              {/* </li> */}
+              {/* <li style={mystyle}> */}
+              <li>
+                <div className="image">
+                  <img src="images/menu/chinese rice.jpg" alt="" style={my} />
+                </div>
+              </li>
+            </ul>
+
+            {/* </li> */}
+          </div>
+
+          <div className="swiper-slide slide">
+            {/* <li style={mystyle}> */}
+            <ul style={mystyle}>
+              <li>
+                <div className="content">
+                  <span style={{ color: "red" }}>our special dish</span>
+                  <h3 style={fonts}>Chille garlic fries</h3>
+                  <p style={font1}>
+                    {" "}
+                    Chilli Garlic fried rice is an absolute winner spicy and
+                    garlicky Fried Rice filled with fiery chili and garlic
+                    flavours that is simply delicious!{" "}
+                  </p>
+                  <a
+                    href="#"
+                    className="btn"
+                    style={{ color: "red", padding: "10px" }}
+                  >
+                    view menu{" "}
+                  </a>
+                </div>
+              </li>
+              {/* </li> */}
+              {/* <li style={mystyle}> */}
+              <li>
+                <div className="image">
+                  <img src="images/menu/samosa.jpg" alt="" style={my} />
+                </div>
+              </li>
+            </ul>
+
+            {/* </li> */}
+          </div>
+        </Carousel>
+      </Grid>

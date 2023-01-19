@@ -766,4 +766,32 @@ const aboutData = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihilharum omnis eum ipsam, enim obcaecati! Veritatis inciduntvoluptas saepe accusantium quod ut architecto beatae at iure.Quibusdam amet optio autem, sint sit quisquam rerum vitae a,iusto, perspiciatis perferendis architecto",
   },
 ];
-export  {menu,aboutData};
+const specialdishes=[
+  {
+    heading:"Chille Garlic Fries",
+    content:'Chilli Garlic fried rice is an absolute winner – spicy and garlicky Fried Rice filled with fiery chili and garlic flavours that is simply delicious!',
+    img:"images/menu/fries.jpg",
+},
+{
+  heading:"Veg Biryani",
+  content:'A variety of vegetables complement each other to create the bold and flavorful taste',
+  img:"images/menu/chinese rice.jpg",
+},
+{
+  heading:"Paneer Makhani Garlic Bread",
+  content:'Spicy garlic paneer is a starter that will be loved by most people. It makes a great appetizer for a party menu',
+  img:"images/menu/bread.jpg",
+},
+{
+  heading:"Noodles",
+  content:'a very thin, long strip of pasta or a similar flour paste, eaten with a sauce or in a soup',
+  img:"images/menu/maggie.jpg",
+},
+{
+  heading:'Hot Chocolate',
+  content:'9 Out of 10 Likes Our Special Hot cup Chocolate which you can eat after chocolate',
+  img:'images/about/carousel/0.jpg'
+}
+]
+
+export  {menu,aboutData,specialdishes};

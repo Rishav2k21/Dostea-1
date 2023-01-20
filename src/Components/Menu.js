@@ -44,7 +44,7 @@ function Menu() {
     <>
       <section className="home bgimage">
         <Typography
-          style={{ fontFamily: "cursive", padding: "35px" ,marginTop:"5px" }}
+          style={{ fontFamily: "cursive", padding: "35px", marginTop: "5px" }}
           textAlign={"center"}
           variant={"h3"}
         >
@@ -65,16 +65,17 @@ function Menu() {
           })}
         </Grid>
       </section>
+      
       <Dialog
-     
+       sx={{bgcolor:'black'}}
         fullScreen
         TransitionComponent={Transition}
         open={show}
         onClose={handleClose}
       >
+      <section className="dialog">
         <Fab
-         
-       style={{ width:"4rem"}}
+          style={{ width: "4rem" }}
           color="success"
           aria-label="add"
           sx={{ padding: "1.7rem" }}
@@ -82,14 +83,12 @@ function Menu() {
         >
           <CloseIcon />
         </Fab>
-        <Divider>
+        <Divider >
           <Typography mt={5} component={"div"} variant={"h3"}>
             {value.Heading}
           </Typography>
         </Divider>
         <Grid
-
-style={{ background:" linearGradient(to bottom, #800000 0%, #ffff00 100%)"}}
           container
           direction="row"
           justifyContent="center"
@@ -109,16 +108,16 @@ style={{ background:" linearGradient(to bottom, #800000 0%, #ffff00 100%)"}}
                   xs={12}
                   mx={1}
                 >
-                  <Card style={{marginTop:"2.5rem"}}>
+                  <Card style={{backgroundColor:'#4d2600', marginTop: "2.5rem" }}>
                     <CardMedia
                       style={{
                         boxShadow:
-                          "0.625rem 0.625rem 0.625rem #aaaaaf,-0.625rem -0.625rem 0.625rem #e9e9ea",
+                          "0.625rem 0.625rem 0.625rem #8888,-0.625rem -0.625rem -0.625rem #4d0000",
                         textAlign: "center",
                         display: " block",
                         marginLeft: "auto",
                         marginRight: "auto",
-                        marginTop:"20px"
+                        marginTop: "20px",
                       }}
                       component="img"
                       sx={{
@@ -133,13 +132,13 @@ style={{ background:" linearGradient(to bottom, #800000 0%, #ffff00 100%)"}}
                       <Typography
                         variant="h5"
                         fontWeight={"bold"}
-                        style={{ color: "blue", textAlign: "center" }}
+                        style={{ color: "#fff", textAlign: "center" }}
                       >
                         {item.name}
                       </Typography>
                       <Typography
                         mb={2}
-                        style={{ color: "blue", textAlign: "center" }}
+                        style={{ color: "#fff", textAlign: "center" }}
                       >
                         {item.subheading ? item.subheading : ""}
                       </Typography>
@@ -160,6 +159,7 @@ style={{ background:" linearGradient(to bottom, #800000 0%, #ffff00 100%)"}}
             );
           })}
         </Grid>
+        </section>
       </Dialog>
     </>
   );

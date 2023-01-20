@@ -2,9 +2,8 @@ import Menu from "./Menu";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AboutUs from "./AboutUs";
 import Footer from "./Footer";
-import Header from "./Header";
 import Home from "./Home";
-import SpecialDishes from "./SpecialDishes";
+import Header from "./Header";
 // import './App.css'
 function App() {
   return (

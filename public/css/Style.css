@@ -41,3 +41,8 @@ h3{
 .footer{
     color: white;
 }
+
+.dialog{
+    background-color: #E4E9FD;
+    background-image: -webkit-linear-gradient(65deg, #6F4E37 50%, #e2cca4 50%);
+}

@@ -23,13 +23,13 @@ function SpecialDishes() {
           {specialdishes.map((dish, index) => {
             return (
               <>
-                <Grid container direction={"row"} justifyContent={'center'}>
+                <Grid key={index} container direction={"row"} justifyContent={'center'}>
                   <Grid item lg={6}>
                     <img width="100%" src={dish.img} style={{boxShadow: "1rem 1rem 1.2rem black,-1rem -1rem 1.2rem #7B3F00"}} alt="" srcset="" />
                   </Grid>
                   <Grid item lg={6} my={'auto'}>
-                    <Typography variant="h3">{dish.heading}</Typography>
-                    <Typography px={2} pb={3}>{dish.content}</Typography>
+                    <Typography variant="h2">{dish.heading}</Typography>
+                    <Typography px={2} pb={3} typography='h6'>{dish.content}</Typography>
                     <Button variant="contained" onClick={()=>{navigate('/menu')}} color="error" style={{boxShadow: "0.625rem 0.625rem 0.625rem black,-0.625rem -0.625rem 0.625rem #7B3F00" }}><Typography variant="h5">View Menu</Typography></Button>
                   </Grid>
                 </Grid>

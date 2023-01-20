@@ -23,16 +23,16 @@ function Footer() {
     if (history === path)
     return {color: '#ffff'}
     else
-    return {color: '#fff'}
+    return {color: '#7B3F00'}
    }
   const navigate =useNavigate()
   return (
     <>
-    <section className="footer" style={{backgroundColor:"#522400" ,color:"#fff", Border:"1px solid red"}} >
+    <section className="footer" style={{backgroundColor:"#bea895" ,color:"#7B3F00", Border:"1px solid red"}} >
       <Grid container direction={"row"} pt={3} justifyContent={"center"}>
         <Grid item pl={3} lg={4} md={4} sm={12} xs={12}>
               <Typography  variant="h4">Newsletter</Typography>
-              <TextField  style={{color:"#fff"}} maxRows={1}  sx={{paddingBottom:'1rem',width:'90%'}} />
+              <TextField autoFocus style={{color:"#fff"}} maxRows={1}  sx={{paddingBottom:'1rem',width:'90%'}} />
               <Button variant="contained">Subscribe</Button>
               <Typography mt={3}  variant="h4">Follow us</Typography>
               <IconButton >
@@ -45,8 +45,8 @@ function Footer() {
                 <WhatsAppIcon style={{fontSize:"3rem"}} color="sucess" />
               </IconButton>
         </Grid>
-        <Grid item pl={3} lg={4} md={4} sm={12} xs={12}>
-          <Typography variant="h4">Location</Typography>
+        <Grid item  lg={4} md={4} sm={12} xs={12}>
+          <Typography pl={3} variant="h4">Location</Typography>
           <Grid ><Map/></Grid>
         </Grid>
         <Grid item pl={3} lg={4} md={4} sm={12} xs={12}>

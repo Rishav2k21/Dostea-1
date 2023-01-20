@@ -1,13 +1,15 @@
 import { Button, Typography } from "@mui/material";
+import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
 function Header() {
   var navlinks = document.getElementById("navlinks");
+  const [show, setShow] = useState("false");
   function showmenu() {
-    navlinks.style.left = "0px";
+    setShow("false");
   }
   function hidemenu() {
-    navlinks.style.left = "-200px";
+    setShow("false");
   }
   const location = useLocation();
   const navigate = useNavigate();
@@ -39,68 +41,61 @@ function Header() {
               </span>
             </h1>
           </a>
-          <div className="nav-links"  id="navlinks">
-            <i
-              className="fa fa-times"
-              onclick={() => {
-                console.log("cross");
-                hidemenu();
-              }}
-            ></i>
-            <ul>
-              <li>
-                <Button
-                  onClick={() => {
-                    navigate("/");
-                  }}
-                  style={isActive(location.pathname, "/")}
-                  variant=""
-                  size="small"
-                >
-                  <Typography variant="h5" fontSize={"30px"}>
-                    Home
-                  </Typography>
-                </Button>
-              </li>
-              <li>
-                <Button
-                  onClick={() => {
-                    navigate("/menu");
-                  }}
-                  style={isActive(location.pathname, "/menu")}
-                  variant=""
-                  size="small"
-                >
-                  <Typography variant="h5" fontSize={"30px"}>
-                    Menu
-                  </Typography>
-                </Button>
-              </li>
-              <li>
-                <Button
-                  onClick={() => {
-                    navigate("/about");
-                  }}
-                  style={isActive(location.pathname, "/about")}
-                  variant=""
-                  size="small"
-                >
-                  {/* <Typography variant="h5" fontSize={'30px'}>Contact us</Typography>
-                </Button>
-              </li>
-              <li>
-                <Button onClick={()=>{navigate('/about')}}
-                  style={isActive(location.pathname, "/about")}
-                  variant=""
-                  size="small"
-                > */}
-                  <Typography variant="h5" fontSize={"30px"}>
-                    About us
-                  </Typography>
-                </Button>
-              </li>
-            </ul>
-          </div>
+          {show && (
+            <div className="nav-links" id="navlinks">
+              <i
+                className="fa fa-times"
+                onclick={() => {
+                  console.log("cross");
+                  hidemenu();
+                }}
+              ></i>
+              <ul>
+                <li>
+                  <Button
+                    onClick={() => {
+                      navigate("/");
+                    }}
+                    style={isActive(location.pathname, "/")}
+                    variant=""
+                    size="small"
+                  >
+                    <Typography variant="h5" fontSize={"30px"}>
+                      Home
+                    </Typography>
+                  </Button>
+                </li>
+                <li>
+                  <Button
+                    onClick={() => {
+                      navigate("/menu");
+                    }}
+                    style={isActive(location.pathname, "/menu")}
+                    variant=""
+                    size="small"
+                  >
+                    <Typography variant="h5" fontSize={"30px"}>
+                      Menu
+                    </Typography>
+                  </Button>
+                </li>
+                <li>
+                  <Button
+                    onClick={() => {
+                      navigate("/about");
+                    }}
+                    style={isActive(location.pathname, "/about")}
+                    variant=""
+                    size="small"
+                  >
+                    <Typography variant="h5" fontSize={"30px"}>
+                      About us
+                    </Typography>
+                  </Button>
+                </li>
+              </ul>
+            </div>
+          )}
           <i
             className="fa fa-bars"
             style={{ color: " #5C2624" }}

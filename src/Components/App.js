@@ -5,7 +5,7 @@ import Footer from "./Footer";
 import Header from "./Header";
 import Home from "./Home";
 import SpecialDishes from "./SpecialDishes";
-import './App.css'
+// import './App.css'
 function App() {
   return (
     <>

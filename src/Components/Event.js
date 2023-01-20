@@ -1,24 +1,40 @@
-import { CardMedia, Grid, Typography,Card  } from "@mui/material";
-
+import { CardMedia, Grid, Typography, Card } from "@mui/material";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+const arr = [1, 2, 3, 4, 5, 6, 7];
 function Event() {
   return (
     <>
-    <Typography variant="h2" gutterBottom sx={{ textAlign: "center",marginTop:'15px' }}>Coming Event</Typography>
-      <Grid container minHeight={'100vh'} justifyContent={'center'}>
-        <Grid item xl={6} lg={6} md={6}>
-          
-        </Grid>
-        <Grid item xl={6} lg={6} md={6}>
-          <Typography sx={{fontSize:'20px'}}>
-            {" "}
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
-            nisi illum perspiciatis quaerat odio vero, tenetur voluptate
-            dignissimos, ipsum ex delectus provident laborum ad architecto in
-            excepturi aliquam nobis quis officia! Nesciunt, eos corrupti!
-            Ducimus numquam itaque pariatur laborum placeat unde est doloremque
-            consectetur quis autem! Amet veniam aspernatur sed?{" "}
-          </Typography>
-        </Grid>
+      <Typography variant="h1" textAlign={"center"}>
+        Events
+      </Typography>
+      <Grid container>
+        <Carousel
+          dynamicHeight={false}
+          emulateTouch
+          transitionTime={1000}
+          interval={2000}
+          infiniteLoop
+          autoPlay
+          centerMode
+          // centerSlidePercentage={'100%'}
+          showThumbs={false}
+        >
+          {arr.map((value, index) => {
+            return (
+              <>
+                <Grid key={index}>
+                  <img
+                    height={"700rem"}
+                    src={`../images/event/slide-${value}.jpg`}
+                    alt=""
+                    srcset=""
+                  />
+                </Grid>
+              </>
+            );
+          })}
+        </Carousel>
       </Grid>
     </>
   );

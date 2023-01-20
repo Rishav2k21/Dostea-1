@@ -1,17 +1,17 @@
 import {
   CardMedia,
-  Divider,
   Button,
   Grid,
   ImageList,
   ImageListItem,
-  Typography,
-  Card,
+  Typography
 } from "@mui/material";
 import CoffeeIcon from "@mui/icons-material/Coffee";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+// import "react-responsive-carousel/lib/styles/carousel.min.css";
 import {aboutData} from './Data'
+// import './aboutus.css'
 const arr = [1, 2, 3, 4, 5, 6, 7];
 function AboutUs() {
   return (
@@ -68,42 +68,31 @@ function AboutUs() {
         </Grid>
         <Grid
           className="crosel bgimage"
-          container
-          direction="column"
-          justifyContent="center"
-          alignItems="center"
+          
         >
-          <Typography variant="h3" gutterBottom mt={2} color={"#777"}>
+          <Typography variant="h3" textAlign={'center'} gutterBottom mt={2} color={"#777"}>
             Why we Love Dostea ?
           </Typography>
-          <Grid
-              mx={"auto"}
-              pb={3}
-              container
-              direction="row"
-              justifyContent="center"
-              alignItems="center"
-              lg={8}
-            >
-          <Carousel  dynamicHeight infiniteLoop autoPlay showArrows={false} showThumbs={false}>
-            {aboutData.map((item,index)=>{
-              return <> 
-              <Grid container>
-              <Grid item lg={6} pr={2}  md={6} sm={12} xs={12}>
-              <Card style={{backgroundColor:'transparent'}}>
-                <CardMedia  width={'100%'} height={'400rem'} component={'img'} src={item.img}/>
-            </Card>
-              </Grid>
-              <Grid item my={'auto'} lg={6} md={6} sm={12} xs={12}>
-                <Typography variant="h2">{item.title}</Typography>
-                <Typography fontSize={'1.4rem'}>{item.Description}</Typography>
-                <Typography mt={2} fontWeight={"bold"}>{item.menu ?<Button variant="contained" color="error">Menu</Button>:<Button variant="contained" color="success">Visit</Button> }</Typography>
-              </Grid>
-              </Grid>
+          <Grid>
+        <Carousel style={{width:'100%'}} infiniteLoop autoPlay centerMode showThumbs={false}>
+          {aboutData.map((data, index) => {
+            return (
+              <>
+                <Grid container direction={"row"} justifyContent={'center'}>
+                  <Grid item lg={6}>
+                    <img width="1rem" src={data.img} style={{boxShadow: "1rem 1rem 1.2rem black,-1rem -1rem 1.2rem black"}} alt="" srcset="" />
+                  </Grid>
+                  <Grid item lg={6} my={'auto'}>
+                    <Typography variant="h3">{data.title}</Typography>
+                    <Typography px={2} pb={3}>{data.Description}</Typography>
+                    <Button variant="contained" color="error"><Typography variant="h5">View Menu</Typography></Button>
+                  </Grid>
+                </Grid>
               </>
-            })}
-          </Carousel>
-          </Grid>
+            );
+          })}
+        </Carousel>
+      </Grid>
         </Grid>
       </Grid>
     </>
